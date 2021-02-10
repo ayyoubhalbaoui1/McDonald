@@ -133,7 +133,7 @@ async function checkCard(price) {
         } else points = 20;
         new QRCode(card_valid, `${points} points`);
         newPin = generateString(8);
-        localStorage.setItem("code", newPin);
+        localStorage.setItem("newpin", newPin);
         newCard = {
           pin: newPin,
           points: points,
@@ -206,6 +206,7 @@ const getDataFromStorage = async () => {
   );
   var totalPrice = localStorage.getItem("totalPrice");
   var finalRed = localStorage.getItem("reduction");
+  localStorage.getItem("pin");
 
   console.log(finalRed + "res");
   var finalprice = 0;
@@ -213,7 +214,7 @@ const getDataFromStorage = async () => {
     finalprice = totalPrice;
     localStorage.setItem("totalPrice", finalprice);
   } else {
-    finalprice = (totalPrice * finalRed) / 100;
+    finalprice = totalPrice - (totalPrice * finalRed) / 100;
     localStorage.setItem("totalPrice", finalprice);
   }
   document.getElementById("finalPrice").innerHTML = finalprice;
@@ -251,23 +252,24 @@ const commande = async () => {
         .catch(function (err) {
           console.log(err);
         });
+      console.log("commande created%");
     })
     .catch(function (error) {
       console.log(error);
     });
   if (cardId == "") {
-    await axios
-      .put("http://localhost:5000/cardfidele/" + cardId, {
-        pin: newpin,
-        points: parseInt(localStorage.getItem("oldPoints")),
-      })
-      .then((response) => {
-        response.data;
-        console.log(response.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    // await axios
+    //   .put("http://localhost:5000/cardfidele/" + cardId, {
+    //     pin: newpin,
+    //     points: parseInt(localStorage.getItem("oldPoints")),
+    //   })
+    //   .then((response) => {
+    //     response.data;
+    //     console.log(response.data);
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
   } else {
     await axios
       .put("http://localhost:5000/cardfidele/" + cardId, {
@@ -284,9 +286,9 @@ const commande = async () => {
         console.log(err);
       });
   }
-  window.location.href = "home.html";
+  // window.location.href = "home.html";
   console.log(localStorage.getItem("newpin"));
 
-  localStorage.clear();
-  localStorage.setItem("Lang", "en");
+  // localStorage.clear();
+  // localStorage.setItem("Lang", "en");
 };
