@@ -3,7 +3,7 @@ const router = express.Router();
 const cardfidele = require("../models/cardfidele");
 const logs = require("../models/logs");
 const log = require("../logs/logStore");
-// const { saveLog, logging } = require("../logs/logStoreFile");
+const { saveLog } = require("../logs/logStoreFile");
 //all
 router.get("/", async (req, res) => {
   try {
@@ -18,9 +18,20 @@ router.get("/", async (req, res) => {
       },
       logs
     );
-    res.sendStatus(500);
+    saveLog("info", "", "get all cards");
   } catch (err) {
     res.status(500).json({ message: err.message });
+
+    log(
+      {
+        file: "crardfile.js",
+        line: "23",
+        info: err.message,
+        type: "INFO",
+      },
+      logs
+    );
+    saveLog("Warning", "", err.message);
   }
 });
 //one promocode
@@ -36,6 +47,17 @@ router.post("/", async (req, res) => {
   try {
     const newcardfidele = await cardfideles.save();
     res.status(201).json(newcardfidele);
+
+    log(
+      {
+        file: "crardfile.js",
+        line: "49",
+        info: "add one card",
+        type: "INFO",
+      },
+      logs
+    );
+    saveLog("Warning", "", "add one card");
   } catch (err) {
     res.status(400).json({ message: err.message });
   }

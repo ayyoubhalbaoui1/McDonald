@@ -286,9 +286,8 @@ const commande = async () => {
         console.log(err);
       });
   }
-  // window.location.href = "home.html";
   console.log(localStorage.getItem("newpin"));
 
-  // localStorage.clear();
-  // localStorage.setItem("Lang", "en");
+  localStorage.clear();
+  localStorage.setItem("Lang", "en");
 };

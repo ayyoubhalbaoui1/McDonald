@@ -28,7 +28,7 @@
                 </div>
                 <div id="randprod" class="d-flex flex-column align-items-center"></div>
             </div>
-            <div class="col-md-8" style="position: relative">
+            <div class="col-md-8  text-center justify-content-center" style="position: relative">
                 <a href="home.html" class="back lang" id="lang" key="back"></a>
                 <div class="row com-title d-flex align-items-center">
                     <h1 id="subCatName"></h1>
@@ -106,7 +106,7 @@
                             <li class="list-group-item">Total Price: <span id="totalPrice2"> </span></li>
                             <li class="list-group-item">Quantity: <span id="quantity2"> </span></li>
                             <li class="list-group-item">Final Price : <span id="finalPrice"> </span> </li>
-                            <li class="list-group-item"><button class="btn btn-success" onclick="commande()">Command</button></li>
+                            <li class="list-group-item"><button class="btn btn-success" onclick="commande()" data-mdb-toggle="modal" data-mdb-target="#exampleModal">Command</button></li>
                             <li class="list-group-item"><button disabled class="btn btn-success">Pay with card</button></li>
                         </ul>
                     </div>
@@ -114,8 +114,26 @@
                 </div>
 
             </div>
+
         </div>
 
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">MC DONAL'S</h5>
+                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">Your commande is added, be happy</div>
+                    <div class="modal-footer">
+
+                        <a type="" href="home.html" class="btn btn-primary">OK</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 
