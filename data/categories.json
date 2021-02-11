@@ -1,0 +1,57 @@
+[{
+    "_id": {
+        "$oid": "601d2e852d01f842b8e84d2c"
+    },
+    "categoryname": "MENU",
+    "img": "menu.png",
+    "__v": 0
+}, {
+    "_id": {
+        "$oid": "601d2e912d01f842b8e84d2d"
+    },
+    "categoryname": "SANDWISH",
+    "img": "sandwish.png",
+    "__v": 0
+}, {
+    "_id": {
+        "$oid": "601d2e9d2d01f842b8e84d2e"
+    },
+    "categoryname": "PETIT FAIM",
+    "img": "faim.png",
+    "__v": 0
+}, {
+    "_id": {
+        "$oid": "601d2ea62d01f842b8e84d2f"
+    },
+    "categoryname": "SALADE",
+    "img": "salade.png",
+    "__v": 0
+}, {
+    "_id": {
+        "$oid": "601d2eae2d01f842b8e84d30"
+    },
+    "categoryname": "DESSERT",
+    "img": "dessert.png",
+    "__v": 0
+}, {
+    "_id": {
+        "$oid": "601d2eb42d01f842b8e84d31"
+    },
+    "categoryname": "BOISSON",
+    "img": "boisson.png",
+    "__v": 0
+}, {
+    "_id": {
+        "$oid": "601d2ebd2d01f842b8e84d32"
+    },
+    "categoryname": "FRITE",
+    "img": "frite.png",
+    "__v": 0
+}, {
+    "_id": {
+        "$oid": "601d2ec42d01f842b8e84d33"
+    },
+    "categoryname": "SAUCE",
+    "img": "sauce.png",
+    "__v": 0
+}]
