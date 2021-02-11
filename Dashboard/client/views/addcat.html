@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Category</title>
+    <link rel="stylesheet" href="../style/style2.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../style/sidebar.css">
+</head>
+
+<body>
+
+
+
+
+
+
+
+    <div class="Big_container">
+        <div id="wrapper">
+
+            <!-- Sidebar -->
+            <div id="sidebar-wrapper">
+                <ul class="sidebar-nav">
+                    <li class="sidebar-brand">
+                        <a href="../views/dashboard.html">
+                            <img class="logo-icon mr-2" src="../images/logo.png" alt=""> </a>
+                    </li>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <li>
+                        <a href="../views/addcat.html">َAdd Category</a> </li>
+                    <li>
+                        <a href="../views/addsub.html">Add Sub_Category</a> </li>
+                    <li>
+                        <a href="../views/addingre.html">Add Ingredient</a> </li>
+                    <li>
+                        <a href="../views/addpro.html">Add Product</a> </li>
+                    <li>
+                        <a href="./promo.html">Add  Code Promo</a> </li>
+                    <li>
+                        <a href="./table.html">Add Table</a> </li>
+                    <li>
+                        <a href="./print_comand.html">Display Commands</a> </li>
+                </ul>
+            </div>
+
+        </div>
+
+
+
+        <!-- mn hna  -->
+        <div class="RS">
+            <!--categories table-->
+            <br />
+            <div class="col-md-12 m-auto display_table" id="categoryTable">
+                <button class="btn btn-dark" data-toggle="modal" data-target=".bd-example-modal1-lg">
+            Add  Category
+          </button>
+                <br>
+                <br>
+                <table class="table table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">Category Name</th>
+                            <th class="text-right" scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="category_tbody"></tbody>
+                </table>
+            </div>
+
+            <!-- Edit cat POP_UP -->
+
+            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <br />
+                        <div class="wrapper">
+                            <h2 class="text-center">Edit category</h2>
+                            <hr />
+                            <form enctype="multipart/form-data">
+                                <div class="form-group m-auto col-md-12">
+                                    <label for="categoryName">Category name</label>
+                                    <input type="text" class="form-control" id="name" name="categoryName" placeholder="Edit Category" />
+                                    <input type="hidden" id="category_id" />
+                                </div>
+                                <br />
+                                <button type="button" class="btn btn-success ml-3" onclick="updateCat()">
+                    Edit category
+                  </button>
+                            </form>
+                        </div>
+                        <br />
+                    </div>
+                </div>
+            </div>
+
+            <!-- addinng new categories modal -->
+            <div class="modal fade bd-example-modal1-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <br />
+                        <div class="wrapper">
+                            <h2 class="text-center">Add new category</h2>
+                            <hr />
+                            <form enctype="multipart/form-data">
+                                <div class="form-group m-auto col-md-12">
+                                    <label for="categoryName">Category name</label>
+                                    <input type="text" class="form-control" id="categoryName" name="categoryName" placeholder="Enter new category" />
+                                </div>
+                                <br />
+                                <button type="button" class="btn btn-primary ml-3" onclick="addCat()">
+                    Add new category
+                  </button>
+                            </form>
+                        </div>
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+<script src="../library/qrcode.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous" />
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="../controllers/category.js"></script>
+<script src="../controllers/ingrediant.js"></script>
+<script src="../controllers/product.js"></script>
+<script src="../controllers/promo.js"></script>
+<script src="../controllers/sub_category.js"></script>
+<script src="../controllers/table_number.js"></script>
+
+
+<!-- Page Specific JS -->
+<script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+</script>
+
+</html>

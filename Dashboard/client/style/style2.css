@@ -1,0 +1,158 @@
+body {
+    animation: colorchange 175s linear 1s infinite;
+    /* animation-name followed by duration in seconds*/
+    /* you could also use milliseconds (ms) or something like 2.5s */
+    -webkit-animation: colorchange 175s linear 0s infinite alternate;
+    /* Chrome and Safari */
+}
+
+@keyframes colorchange {
+    0% {
+        background: red;
+        color: cyan;
+    }
+    33% {
+        background: green;
+        color: magenta;
+    }
+    66% {
+        background: blue;
+        color: yellow;
+    }
+    100% {
+        background: red;
+        color: cyan;
+    }
+}
+
+@-webkit-keyframes colorchange
+/* Safari and Chrome - necessary duplicate */
+
+{
+    0% {
+        background: red;
+        color: cyan;
+    }
+    33% {
+        background: green;
+        color: magenta;
+    }
+    66% {
+        background: blue;
+        color: yellow;
+    }
+    100% {
+        background: red;
+        color: cyan;
+    }
+}
+
+.Big_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left_slide {
+    width: 25%;
+    background-color: brown;
+    height: 100vh;
+    position: fixed;
+}
+
+.RS {
+    width: 89%;
+    position: relative;
+    left: 4px;
+}
+
+.RSS {
+    width: 324%;
+    position: relative;
+    left: 87%;
+}
+
+.image_wrapper {
+    text-align: center;
+    margin-top: 12px;
+}
+
+.image_wrapper a {
+    text-decoration: none;
+    color: white;
+}
+
+.image_wrapper a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.image_wrapper img {
+    border-radius: 8px;
+    box-shadow: 1px 1px 12px black;
+    width: 65%;
+}
+
+.button_wrapper {
+    width: 90%;
+    margin: auto;
+    margin-top: 79px;
+}
+
+.button_wrapper button {
+    width: 100%;
+    font-size: 18px;
+    background-color: #f8ae19;
+    padding: 2%;
+    color: white;
+    border: none;
+    box-shadow: 1px 1px 7px black;
+    cursor: pointer;
+}
+
+.wrapper {
+    color: white;
+    width: 93%;
+    padding: 11px;
+    margin: auto;
+    margin-top: 3px;
+}
+
+hr {
+    background-color: white;
+}
+
+#divShow {
+    background-color: rgb(16, 70, 80);
+    padding: 12px;
+}
+
+#divShow p,
+h2 {
+    text-align: center;
+    color: white;
+}
+
+#td_body {
+    height: 865px;
+}
+
+#td_body img {
+    margin: auto;
+    border: 1px solid;
+    text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.button_wrapper a {
+    text-decoration: none;
+    color: white;
+}
+
+.button_wrapper a:hover {
+    text-decoration: none;
+    color: white;
+}
