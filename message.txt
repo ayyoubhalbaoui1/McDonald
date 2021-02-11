@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            animation: colorchange 175s linear 1s infinite;
+            /* animation-name followed by duration in seconds*/
+            /* you could also use milliseconds (ms) or something like 2.5s */
+            -webkit-animation: colorchange 175s linear 0s infinite alternate;
+            /* Chrome and Safari */
+        }
+        
+        @keyframes colorchange {
+            0% {
+                background: red;
+                color: cyan;
+            }
+            33% {
+                background: green;
+                color: magenta;
+            }
+            66% {
+                background: blue;
+                color: yellow;
+            }
+            100% {
+                background: red;
+                color: cyan;
+            }
+        }
+        
+        @-webkit-keyframes colorchange
+        /* Safari and Chrome - necessary duplicate */
+        
+        {
+            0% {
+                background: red;
+                color: cyan;
+            }
+            33% {
+                background: green;
+                color: magenta;
+            }
+            66% {
+                background: blue;
+                color: yellow;
+            }
+            100% {
+                background: red;
+                color: cyan;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <button class="btn btn-danger" id="create_pdf" onclick="testMy()">
+        click
+    </button>
+
+    <div id="showComands">
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+    <script src="../controllers/print_comand.js"></script>
+</body>
+
+</html>
