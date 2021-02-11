@@ -4,7 +4,7 @@ const logConfiguration = {
   transports: [
     new winston.transports.Console(),
     new winston.transports.File({
-      filename: "allLogs.log",
+      filename: "./logs/allLogs.log",
     }),
   ],
 };
@@ -21,5 +21,4 @@ function saveLog(level, link, message) {
   return lg;
 }
 
-
-module.exports = { saveLog, logging };
+module.exports = { saveLog };

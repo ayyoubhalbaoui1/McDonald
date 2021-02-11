@@ -1,0 +1,74 @@
+[{
+    "_id": {
+        "$oid": "601db95eade3fb07dc7023b7"
+    },
+    "ingredientName": "12 chicken McNuggets +3 Chicken Sticks+6 Croquettes fromage poivron+3 sauces au choix",
+    "price": 0,
+    "__v": 0
+}, {
+    "_id": {
+        "$oid": "601dbd609ab7a21f2c9e8bfc"
+    },
+    "ingredientName": "Sandwich choisi + Frite + boisson soda",
+    "price": 20
+}, {
+    "_id": {
+        "$oid": "601dbd609ab7a21f2c9e8bfd"
+    },
+    "ingredientName": "Sandwich choisi + mini salade + desert + Frite + boisson soda",
+    "price": 40
+}, {
+    "_id": {
+        "$oid": "601dbd609ab7a21f2c9e8bfe"
+    },
+    "ingredientName": "Sandwich choisi",
+    "price": 0
+}, {
+    "_id": {
+        "$oid": "601dbd609ab7a21f2c9e8bff"
+    },
+    "ingredientName": "Wrap + Frite + boisson soda",
+    "price": 25
+}, {
+    "_id": {
+        "$oid": "601dbd609ab7a21f2c9e8c00"
+    },
+    "ingredientName": "Salade choisi",
+    "price": 0
+}, {
+    "_id": {
+        "$oid": "601dbd609ab7a21f2c9e8c01"
+    },
+    "ingredientName": "McFlurry Choisi",
+    "price": 0
+}, {
+    "_id": {
+        "$oid": "601dbd609ab7a21f2c9e8c02"
+    },
+    "ingredientName": "Milk-shake Choisi",
+    "price": 0
+}, {
+    "_id": {
+        "$oid": "601dbd609ab7a21f2c9e8c03"
+    },
+    "ingredientName": "boisson choisi",
+    "price": 0
+}, {
+    "_id": {
+        "$oid": "601dbd609ab7a21f2c9e8c04"
+    },
+    "ingredientName": "Frite choisi",
+    "price": 0
+}, {
+    "_id": {
+        "$oid": "601dbd609ab7a21f2c9e8c05"
+    },
+    "ingredientName": "Sauce choisi",
+    "price": 0
+}, {
+    "_id": {
+        "$oid": "601dc8709ab7a21f2c9e8c06"
+    },
+    "ingredientName": "Brownie Choisi",
+    "price": 0
+}]
