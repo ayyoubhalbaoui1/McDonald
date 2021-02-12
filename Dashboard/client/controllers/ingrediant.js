@@ -6,7 +6,9 @@ async function getCatS() {
         .get(url2)
         .then(function(response) {
             const data = response.data;
+            console.log(data);
             for (let i = 0; i < data.length; i++) {
+
                 var option = `
               <tr>
                 <td>${data[i].ingrediant}</td>
@@ -44,6 +46,7 @@ async function addingrediant() {
 }
 
 //get all ingredients
+
 async function getIngrediant() {
     await axios
         .get(url2)
@@ -53,6 +56,8 @@ async function getIngrediant() {
                 var option = `<option value="${data[i]._id}">${data[i].ingrediant}</option>
         `;
                 document.getElementById("ingrediant_list").innerHTML += option;
+                document.getElementById("ingrediant_list").innerHTML += option;
+                document.getElementById("editIng").innerHTML += option;
             }
         })
         .catch(function(error) {

@@ -71,39 +71,39 @@
 
             <div class="modal fade bd-example-modal4-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
+                    <div style="    background-color: #333;" class="modal-content">
                         <br />
                         <div class="wrapper">
-                            <h2 class="text-center">Add new product</h2>
+                            <h2 class="text-center">Add Product</h2>
                             <hr />
                             <form enctype="multipart/form-data">
                                 <div class="form-group m-auto col-md-12">
-                                    <label for="">sub category list</label>
+                                    <label for="">List Of SubCategories</label>
                                     <br />
                                     <select class="form-select col-md-12 p-2" aria-label="Default select example" id="sub_category_list">
-                      <option selected>Chose a sub category</option>
+                      <option selected>Select SubCategory</option>
                     </select>
                                 </div>
                                 <br />
                                 <div class="form-group m-auto col-md-12">
-                                    <label for="">ingredient list</label>
+                                    <label for="">List Of Ingredient</label>
                                     <br />
                                     <select class="form-select col-md-12 p-2" aria-label="Default select example" id="ingrediant_list">
-                      <option selected>Chose ingredient</option>
+                      <option selected>Select Ingredient</option>
                     </select>
                                 </div>
                                 <br />
                                 <div class="form-group m-auto col-md-12">
                                     <label for="">Product name</label>
-                                    <input type="text" class="form-control" id="productName" name="productName" placeholder="Enter new product" />
+                                    <input type="text" class="form-control" id="productName" name="productName" placeholder="Product Name" />
                                 </div>
                                 <br />
                                 <div class="form-group m-auto col-md-12">
                                     <label for="">Product Price</label>
-                                    <input type="number" class="form-control" id="productPrice" name="productPrice" placeholder="Enter product price" />
+                                    <input type="number" class="form-control" id="productPrice" name="productPrice" placeholder="Product Price" />
                                 </div>
                                 <br />
-                                <button type="button" class="btn btn-primary ml-3" onclick="addProduct()">
+                                <button type="button" class="btn btn-primary" onclick="addProduct()">
                     Add new product
                   </button>
                             </form>
@@ -116,9 +116,9 @@
 
             <!--Edit Product POP_UP-->
 
-            <div class="modal fade bd-example-modal4-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal fade bd-example-modal5-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
+                    <div style="background-color: #333; " class="modal-content">
                         <br />
                         <div class="wrapper">
                             <h2 class="text-center">Edit product</h2>
@@ -127,7 +127,7 @@
                                 <div class="form-group m-auto col-md-12">
                                     <label for="">sub category list</label>
                                     <br />
-                                    <select class="form-select col-md-12 p-2" aria-label="Default select example" id="sub_category_list">
+                                    <select class="form-select col-md-12 p-2" aria-label="Default select example" id="sub_category_listE">
                       <option selected>Chose a sub category</option>
                     </select>
                                 </div>
@@ -135,22 +135,22 @@
                                 <div class="form-group m-auto col-md-12">
                                     <label for="">ingrediant list</label>
                                     <br />
-                                    <select class="form-select col-md-12 p-2" aria-label="Default select example" id="ingrediant_list">
-                      <option selected>Chose an ingrediant</option>
-                    </select>
+                                    <select class="form-select col-md-12 p-2" aria-label="Default select example" id="editIng">
+                                    <option selected>Chose an ingrediant</option>
+                                </select>
                                 </div>
                                 <br />
                                 <div class="form-group m-auto col-md-12">
                                     <label for="">Product name</label>
-                                    <input type="text" class="form-control" id="productName" name="productName" placeholder="Enter new product" />
+                                    <input type="text" class="form-control" id="productName" name="productNameE" placeholder="Enter new product" />
                                 </div>
                                 <br />
                                 <div class="form-group m-auto col-md-12">
                                     <label for="">Product Price</label>
-                                    <input type="number" class="form-control" id="productPrice" name="productPrice" placeholder="Enter product price" />
+                                    <input type="number" class="form-control" id="productPrice" name="productPriceE" placeholder="Enter product price" />
                                 </div>
                                 <br />
-                                <button type="button" class="btn btn-primary ml-3" onclick="addProduct()">
+                                <button type="button" class="btn btn-success ml-3" onclick="editProduct()">
                     Add new product
                   </button>
                             </form>

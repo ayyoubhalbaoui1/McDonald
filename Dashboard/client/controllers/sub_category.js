@@ -73,6 +73,7 @@ async function getsub_Cat() {
           <option value="${data[i]._id}">${data[i].sub_categoryName}</option>
         `;
                 document.getElementById("sub_category_list").innerHTML += option;
+                document.getElementById("sub_category_listE").innerHTML += option;
             }
         })
         .catch(function(error) {

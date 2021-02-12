@@ -18,7 +18,7 @@ async function getdata() {
               `;
                 document.getElementById("showComands").innerHTML += option;
 
-                document.getElementById('showComands').innerHTML += `<button type="button" class="btn btn-primary"  onclick="testMyD('${data[i].productName}', '${data[i].productPrice}')" >Print Command</button> <hr>`
+                document.getElementById('showComands').innerHTML += `<button type="button" class="btn btn-danger"  onclick="testMyD('${data[i].productName}', '${data[i].productPrice}')" >Print Command</button> <hr>`
             }
         })
         .catch(function(err) {

@@ -15,7 +15,8 @@ async function addPromocode() {
         });
 }
 
-//get Promo Code 
+//get Promo Code
+
 async function getCode() {
     var show = document.getElementById("td_body")
     var shoDiv = document.querySelector('#divShow')
@@ -37,6 +38,7 @@ async function getCode() {
 getCode();
 
 //delete promo code
+
 async function deleteCode(id) {
     await axios
         .delete("http://localhost:5000/code/delete/" + id)

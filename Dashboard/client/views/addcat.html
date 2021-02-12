@@ -80,7 +80,7 @@
 
             <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
+                    <div style="background-color: #333; " class="modal-content">
                         <br />
                         <div class="wrapper">
                             <h2 class="text-center">Edit category</h2>
@@ -88,7 +88,7 @@
                             <form enctype="multipart/form-data">
                                 <div class="form-group m-auto col-md-12">
                                     <label for="categoryName">Category name</label>
-                                    <input type="text" class="form-control" id="name" name="categoryName" placeholder="Edit Category" />
+                                    <input type="text" class="form-control" id="name" name="categoryName" placeholder="" />
                                     <input type="hidden" id="category_id" />
                                 </div>
                                 <br />
@@ -105,15 +105,15 @@
             <!-- addinng new categories modal -->
             <div class="modal fade bd-example-modal1-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
+                    <div style="background-color: #333; " class="modal-content">
                         <br />
                         <div class="wrapper">
                             <h2 class="text-center">Add new category</h2>
                             <hr />
                             <form enctype="multipart/form-data">
                                 <div class="form-group m-auto col-md-12">
-                                    <label for="categoryName">Category name</label>
-                                    <input type="text" class="form-control" id="categoryName" name="categoryName" placeholder="Enter new category" />
+                                    <label style="color: black;" for="categoryName">Category name</label>
+                                    <input type="text" class="form-control" id="categoryName" name="categoryName" placeholder="" />
                                 </div>
                                 <br />
                                 <button type="button" class="btn btn-primary ml-3" onclick="addCat()">
